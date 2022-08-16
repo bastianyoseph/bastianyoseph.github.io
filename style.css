@@ -251,6 +251,7 @@ img {
   font-weight: var(--font-semi);
   border-radius: 0.5rem;
   transition: 0.3s;
+  border-style: none;
 }
 
 .button:hover {
@@ -376,12 +377,24 @@ img {
 
 .contact__button {
   display: block;
-  border: none;
+  border: block;
   outline: none;
   font-size: var(--normal-font-size);
   cursor: pointer;
   margin-left: auto;
+  align-items: flex-start;
 }
+#btnreset {
+  display: block;
+  border: block;
+  outline: none;
+  font-size: var(--normal-font-size);
+  cursor: pointer;
+  margin-top: 5px;
+  align-content: flex-end;
+  position: relative;
+}
+
 
 /* ===== FOOTER =====*/
 .footer {
@@ -389,7 +402,7 @@ img {
   color: #fff;
   text-align: center;
   font-weight: var(--font-semi);
-  padding: 2rem 0;
+  padding: 2rem ;
 }
 
 .footer__title {
@@ -532,3 +545,42 @@ img {
     width: 450px;
   }
 }
+
+.reset{
+  background-color: var(--first-color);
+  font-family:"Poppins", sans-serif;
+  border: 5px ;
+  border-radius: 5px ;
+  color: white;
+  padding: 0.2rem 1rem;
+  font-weight: var(--font-semi);
+  border-radius: 0.5rem;
+  transition: 0.3s;
+  display: inline-block;
+  align-items: center;
+}
+.reset{
+  display: flex;
+  border: block;
+  outline: none;
+  font-size: var(--normal-font-size);
+  cursor: pointer;
+  margin-left: auto;
+  align-items: flex-end;
+}
+.reset:hover {
+  box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
+}
+  .message{
+    background-color: var(--first-color);
+    font-family:"Poppins", sans-serif;
+    border: 5px ;
+    border-radius: 5px ;
+    color: white;
+    padding: 0.2rem 1rem;
+    font-weight: var(--font-semi);
+    border-radius: 0.5rem;
+    transition: 0.3s;
+    display: inline-block;
+    align-items: center;
+  }
