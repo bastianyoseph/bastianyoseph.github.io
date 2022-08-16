@@ -9,9 +9,11 @@
     <!-- =====BOX ICONS===== -->
     <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
 
+
     <title>Yosep Bastian</title>
   </head>
   <body>
+   
     <!--===== HEADER =====-->
     <header class="l-header">
       <nav class="nav bd-grid">
@@ -76,12 +78,12 @@
 
         <div class="about__container bd-grid">
           <div class="about__img">
-            <img src="IMG20220630190103.jpg" alt="" />
+            <img src="IMG202206301901.jpg" alt="" />
           </div>
 
           <div>
-            <h2 class="about__subtitle">I'am Bastian</h2>
-            <p class="about__text">I am a person who has a high enthusiasm for learning. Currently focusing on Web Development.</p>
+            <h2 class="about__subtitle">I'm Bastian</h2>
+            <p class="about__text">I'm a person who has a high enthusiasm for learning & passionate about creating and developing web interfaces.</p>
           </div>
         </div>
       </section>
@@ -136,27 +138,25 @@
             </div>
           </div>
 
-          <div>
-            <img src="assets/img/work3.jpg" alt="" class="skills__img" />
-          </div>
+        
         </div>
       </section>
 
       <!--===== WORK =====-->
       <section class="work section" id="work">
         <h2 class="section-title">
-          Work <span><br />(Not Updated)<br /></span>
+          Work <span><br /><br /></span>
         </h2>
 
         <div class="work__container bd-grid">
-          <a href="" class="work__img">
-            <img src="work1.jpg" alt="" />
+          <a href="https://My-Game.yosepbastian.repl.co" class="work__img" target="_blank" >
+            <img src="MY game 1.png" alt="" style="width: 620px;" height="426px" />
           </a>
-          <a href="" class="work__img">
-            <img src="work2.jpg" alt="" />
+          <a href="https://calbmi.yosepbastian.repl.co/" class="work__img"  target="_blank">
+            <img src="game 2.png" alt="" />
           </a>
-          <a href="" class="work__img">
-            <img src="work3.jpg" alt="" />
+          <a href="https://yosepbastianlinktree.yosepbastian.repl.co/" class="work__img" target="_blank">
+            <img src="link tree.png" alt="" />
           </a>
           <a href="" class="work__img">
             <img src="work4.jpg" alt="" />
@@ -175,12 +175,20 @@
         <h2 class="section-title">Contact</h2>
 
         <div class="contact__container bd-grid">
-          <form action="" class="contact__form">
-            <input type="text" placeholder="Name" class="contact__input" />
-            <input type="mail" placeholder="Email" class="contact__input" />
-            <textarea name="text" id="" placeholder="Leave Message" cols="0" rows="10" class="contact__input"></textarea>
-            <input type="button" value="Submit" class="contact__button button" />
+          <form name='bastianyoseph-contact-form'action="" class="contact__form" >
+            <input name="nama" type="text" placeholder="Name" class="contact__input"  />
+            <input name="email" type="text" placeholder="Email" class="contact__input"  id="em"/>
+            <textarea name="message" type="text" placeholder="Leave Message" cols="0" rows="10" class="contact__input" id="ms"></textarea>
+            <button type="submit" class="contact__button button" >Submit</button>
+            <div> <button type="reset" class="reset" id="btnreset" >Reset</button></div>
+           
+         
+            
           </form>
+          <div>
+            <p class="message"> Pesan Terkirim 
+            
+          </div>
         </div>
       </section>
     </main>
@@ -193,7 +201,7 @@
         <a href="https://www.instagram.com/yosepbastian_/" target="_blank" class="footer__icon"><i class="bx bxl-instagram"></i></a>
         <a href="https://wa.me/6285289357208" target="_blank" class="footer__icon"><i class="bx bxl-whatsapp"></i></a>
       </div>
-      <p class="footer__copy">&#169; Yosep Bastian. All rigths reserved</p>
+      <p class="footer__copy">&#169; Yosep Bastian. Made with Love :)</p>
     </footer>
 
     <!--===== SCROLL REVEAL =====-->
@@ -201,5 +209,16 @@
 
     <!--===== MAIN JS =====-->
     <script src="script.js"></script>
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbyUPXQCb3D6eGzxfngmyObCa2no4yTo4Uol2n0LBI3xIUa5c52u2Y6wvv-dcQ4sl74/exec"
+      const form = document.forms['bastianyoseph-contact-form']
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
   </body>
 </html>
